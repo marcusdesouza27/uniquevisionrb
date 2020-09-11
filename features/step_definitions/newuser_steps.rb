@@ -6,8 +6,7 @@ When("user create a new register") do
     @login.checkpwd(DATA['pwd'])
     @login.accept_therms
     @login.accept_subscribe
-    # sleep 10
-    login.new_user_submit
+    @login.new_user_submit
   end                                                                                
                                                                                      
   Then("he see your email on my account page") do                                    

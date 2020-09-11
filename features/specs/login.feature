@@ -4,7 +4,7 @@ Feature:
 
     Background:
         Given I access Unique Vision Homepage
-        And User acces login page
+        And User acces My Account page
 
 @valid_login
 Scenario: Unique Vision Login Page

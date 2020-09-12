@@ -5,7 +5,7 @@ Feature:
 
     Background:
         Given I access Unique Vision Homepage
-        And User acces login page
+        And User acces My Account page
 
 @new_user
 Scenario: Customer Registration

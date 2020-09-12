@@ -17,8 +17,8 @@ class LoginPage < SitePrism::Page
     element :dn_year, 'select[name="year"]'
     element :new_pwd, '#password'
     element :check_pwd, 'input[name="checkPwd"]'
-    element :acceptTherms, :xpath, '/html/body/main/div[9]/div[2]/div/div[3]/div/div/div/div/div/form/div[2]/div[1]/div/div/input[1]'
-    element :accepSubscribe, 'input[id="check-subscribe"]'
+    element :acceptTherms, 'label[for="check-accept"]'
+    element :accepSubscribe, 'label[for="check-subscribe"]'
     element :btn_submit, '#btnCaptcha'
     element :new_user_error, '.logErrorGlobal__log--icon'
     
@@ -61,12 +61,11 @@ class LoginPage < SitePrism::Page
     def accept_therms
         page.execute_script('window.scrollTo(0, 500)')
         # binding.pry
-        # acceptTherms.make_visible
-        find('class[name="control-label login-form-content__check--accept"]')
+      
         acceptTherms.click
     end
     def accept_subscribe
-        accepSubscribe.check
+        accepSubscribe.click
     end
 
     def new_user_submit

@@ -1,4 +1,4 @@
-When('User acces login page') do
+When('User acces My Account page') do
   @uvhome.login_reg
 end
 

@@ -1,0 +1,11 @@
+---
+default: -p chrome -p json -p pretty
+ci: -p headless -p json -p pretty
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+json: --format json --out=logs/report.json
+pretty: --format pretty
+progress: --format progress
+devAWS: -p default ENVIRONMENT="https://uniquevision:9002/pe/"
+devSAP: -p default ENVIRONMENT="https://dev.uniquevision-hybris.com/pe/"

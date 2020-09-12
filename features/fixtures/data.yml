@@ -1,0 +1,7 @@
+user: qa@automation.com
+inv_user: unexistent@test.com
+pwd: Test1234
+pwd_fail: 123456
+credit_card: 4111111111111111
+user_hybris: auto.ybluqateam
+userhyb_pwd: qa#auto@999

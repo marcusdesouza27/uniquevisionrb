@@ -1,6 +1,4 @@
 class LoginPage < SitePrism::Page
-   
-
     element :input_login, "#j_username"
     element :input_pwd, "#j_password"
     element :icon_showpwd, :xpath, "//div[contains(@class,'form-label-transition relative')]//i[contains(@class,'fa customer-eye-show icon-eye')]"

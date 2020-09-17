@@ -32,9 +32,36 @@ class MyAccount <SitePrism::Page
         link_addresses.hover
         icon_wishlist.hover
         link_wishlist.hover
-        icon_myCredts.hover
-        link_myCredts.hover
+        icon_myCredits.hover
+        link_myCredits.hover
         icon_closeSection.hover
         link_closeSection.hover
+    end
+
+    def profile_menu
+        link_profile.click
+    end
+    def myCards_menu
+        icon_myCards.click
+    end
+
+    def orderHistory_menu
+        icon_myOrders.click
+    end
+
+    def addressBook_menu
+        icon_addresses.click
+    end
+
+    def wishList_menu
+        icon_wishlist.click
+    end
+
+    def myCredits_menu
+        link_myCredits
+    end
+
+    def logout_menu
+        icon_closeSection.click
     end
 end

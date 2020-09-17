@@ -7,8 +7,18 @@ When('User proceed login') do
   @login.login_btn
 end
 
+When("User proceed login as user to edit") do
+  @login.login(DATA['editUser'], DATA['editUserPwd'])
+  @login.login_btn
+end
+
 Then('I see logged page user') do
   expect(page).to have_content(DATA['user'])
+end
+
+When("User proceed login as edited user") do
+  @login.login(DATA['newEmail'], DATA['newPwd'])
+  @login.login_btn
 end
 
 When('User proceed login with unexistent email') do

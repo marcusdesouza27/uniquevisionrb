@@ -39,7 +39,7 @@ class MyAccount <SitePrism::Page
     end
 
     def profile_menu
-        icon_profile.click
+        link_profile.click
     end
     def myCards_menu
         icon_myCards.click

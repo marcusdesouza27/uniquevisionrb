@@ -15,6 +15,18 @@ Scenario: Load My Account Page
 
 @edit_profile_name
 Scenario: Load Profile Name
-    When User proceed login
-    And edits your data
+    When User proceed login as user to edit
+    And user clicks on Profile option
+    And edits your name and lastname
+    And edits your email    
+    And edits your password
+    Then he sees the edit confirmation message
+
+@restore_profile
+Scenario: Restore edited profile
+    When User proceed login as edited user
+    And user clicks on Profile option
+    And restores older name and lastname
+    And restores your email    
+    And restores your password
     Then he sees the edit confirmation message

@@ -1,7 +1,7 @@
 Before do
     # page.current_window.resize_to(1400, 800)
     visit '/'
-    page_certification()
+    # page_certification()
     
     @uvhome = UvHome.new
     @login = LoginPage.new

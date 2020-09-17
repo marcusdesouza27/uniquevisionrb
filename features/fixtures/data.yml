@@ -5,7 +5,11 @@ pwd_fail: 123456
 credit_card: 4111111111111111
 user_hybris: auto.ybluqateam
 userhyb_pwd: qa#auto@999
+edit_name: Automation
+edit_lastname: Customer
 editUser: test.update@auto.com
 editUserPwd: Test1234
 newEmail: automation@update.com
 newPwd: New123pwd
+new_name: Edited Name
+new_lastname: Lastname Edited

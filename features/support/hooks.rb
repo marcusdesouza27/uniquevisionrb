@@ -5,7 +5,8 @@ Before do
     
     @uvhome = UvHome.new
     @login = LoginPage.new
-    @profile = MyAccount.new
+    @myaccount = MyAccount.new
+    @profile = MyProfile.new
 end
 
 After do |scenario|

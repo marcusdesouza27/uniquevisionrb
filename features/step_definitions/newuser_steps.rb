@@ -1,6 +1,7 @@
                                                                                    
-When("user create a new register") do                                              
-    @login.new_userdata
+When("user creates a new account") do                                                                   
+    @login.new_userName
+    @login.new_userMail
     @login.new_birthdate
     @login.password(DATA['pwd'])
     @login.checkpwd(DATA['pwd'])
@@ -10,5 +11,5 @@ When("user create a new register") do
   end                                                                                
                                                                                      
   Then("he see your email on my account page") do                                    
-    pending # Write code here that turns the phrase above into concrete actions      
+    expect(@profile.span_email).to have_content(@n_mail)
   end                                                                                

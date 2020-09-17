@@ -9,5 +9,10 @@ Feature:
 
 @new_user
 Scenario: Customer Registration
-    When user create a new register
+    When user creates a new account
+    Then he see your email on my account page
+
+@duplicated_user
+Scenario: Customer Registration
+    When user creates a new account using
     Then he see your email on my account page

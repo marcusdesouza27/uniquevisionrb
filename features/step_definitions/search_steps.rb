@@ -5,3 +5,11 @@ When("user searchs for products") do
   Then("all products is displayed") do
     expect(@product_list.span_results).to have_content("Has buscado\"PAULINA\"")
   end
+
+  When("user searchs for products without prescription") do
+    @uvhome.search_paulina(DATA['prod_noprescription'])
+  end
+  
+  Then("this product is displayed") do
+    expect(@product_list.span_results).to have_content("Has buscado\"PAULINA YELLOW\"")
+  end

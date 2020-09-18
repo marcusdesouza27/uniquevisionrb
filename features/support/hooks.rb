@@ -7,6 +7,8 @@ Before do
     @login = LoginPage.new
     @myaccount = MyAccount.new
     @profile = MyProfile.new
+    @cards = CreditCards.new
+    @product_list = PLP.new
 end
 
 After do |scenario|

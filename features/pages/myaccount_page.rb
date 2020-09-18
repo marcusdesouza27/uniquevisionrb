@@ -13,8 +13,8 @@ class MyAccount <SitePrism::Page
     element :link_addresses, 'a[title="Mis Direcciones"]'
     element :icon_wishlist, '.icon-wishlist'
     element :link_wishlist, 'a[title="Favoritos"]'
-    element :icon_myCredts, '.icon-cash'
-    element :link_myCredts, 'a[title="Mis créditos"]'
+    element :icon_myCash, '.icon-cash'
+    element :link_myCash, 'a[title="Mis créditos"]'
     element :icon_closeSection, '.icon-log-out'
     element :link_closeSection, '.__all--opt > li:nth-child(3) > div:nth-child(1) > a:nth-child(2)'
 
@@ -32,8 +32,8 @@ class MyAccount <SitePrism::Page
         link_addresses.hover
         icon_wishlist.hover
         link_wishlist.hover
-        icon_myCredits.hover
-        link_myCredits.hover
+        icon_myCash.hover
+        link_myCash.hover
         icon_closeSection.hover
         link_closeSection.hover
     end

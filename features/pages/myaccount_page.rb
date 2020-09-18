@@ -6,7 +6,7 @@ class MyAccount <SitePrism::Page
     element :icon_profile, "div.js-:nth-child(2) > nav:nth-child(1) > li:nth-child(1) > div:nth-child(1) > i:nth-child(1)"
     element :link_profile, '.js-mobile-click-profile'
     element :icon_myCards, '.icon-card'
-    element :link_myCards, '#\31  > div > a'
+    element :link_myCards, 'a[title="Tarjetas"]'
     element :icon_myOrders, '.icon-box'
     element :link_myOrders, 'a[title="Historial de Compras"]'
     element :icon_addresses, '.icon-book'
@@ -42,7 +42,7 @@ class MyAccount <SitePrism::Page
         link_profile.click
     end
     def myCards_menu
-        icon_myCards.click
+        link_myCards.click
     end
 
     def orderHistory_menu
@@ -64,4 +64,6 @@ class MyAccount <SitePrism::Page
     def logout_menu
         icon_closeSection.click
     end
+
+    
 end

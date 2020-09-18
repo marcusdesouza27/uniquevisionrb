@@ -3,8 +3,4 @@ dup_email: Ya existe una cuenta con ese correo electrónico.
 newUser_mandatoryField: Por favor, corrige los campos en rojo
 edit_success: Datos guardados correctamente
 alert_cards: No hay detalles de pago guardados
-# login_fail_mx: La dirección de correo electrónico no es válida
-# pwd_null: O campo da password está vazio, preencha-o.
-# pwd_null_mx: Por favor introduce una contraseña
-# header_bc_points: VOCÊ TEM 0BC PTS
-# header_bc_points_mx: 0 PUNTOS
+search_results_paulina: 

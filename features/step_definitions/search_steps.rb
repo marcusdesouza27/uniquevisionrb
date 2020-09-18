@@ -13,3 +13,7 @@ When("user searchs for products") do
   Then("this product is displayed") do
     expect(@product_list.span_results).to have_content("Has buscado\"PAULINA YELLOW\"")
   end
+
+  When("apply filter by size") do
+    @product_list.size
+  end

@@ -8,7 +8,7 @@ Before do
     @myaccount = MyAccount.new
     @profile = MyProfile.new
     @cards = CreditCards.new
-    @product_list = PLP.new
+    @product_list = ProductList.new
 end
 
 After do |scenario|

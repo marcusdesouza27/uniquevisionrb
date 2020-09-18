@@ -30,3 +30,9 @@ Scenario: Restore edited profile
     And restores your email    
     And restores your password
     Then he sees the edit confirmation message
+
+@no_credit_cards
+Scenario: Credit Cards no Card
+    When User proceed login
+    And user clicks in My Credits Cards menu
+    Then sees no credit cards alert

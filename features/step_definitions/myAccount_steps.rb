@@ -45,3 +45,11 @@ Then("I verify all elements on page") do
   Then("he sees the edit confirmation message") do
     expect(@profile.alert_sucess).to have_content MESSAGE_ASSERT['edit_success']
   end
+
+  When("user clicks in My Credits Cards menu") do                                                  
+    @myaccount.myCards_menu
+  end                                                                                              
+                                                                                                   
+  Then("sees no credit cards alert") do                                                            
+    expect(@cards.nocredits_alert).to have_content MESSAGE_ASSERT['alert_cards']
+  end                                                                                              

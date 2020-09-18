@@ -38,4 +38,14 @@ When("user creates a new account") do
   Then("user sees missing mandatories fields alert message") do                  
     expect(@login.new_user_error2).to have_content MESSAGE_ASSERT['newUser_mandatoryField']
   end                                                                            
-                                                                                 
+
+  When("user creates a new account with check password unmatch") do
+    @login.new_userName
+    @login.new_userMail
+    @login.new_birthdate
+    @login.password(DATA['pwd'])
+    @login.checkpwd(DATA['pwd_fail'])
+    @login.accept_therms
+    @login.accept_subscribe
+    @login.new_user_submit
+  end

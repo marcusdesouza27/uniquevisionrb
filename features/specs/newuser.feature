@@ -21,3 +21,8 @@ Scenario: Customer Registration Duplicated e-mail
 Scenario: Customer Registration Mandatories fields
     When user creates a new account without mandatories fields
     Then user sees missing mandatories fields alert message
+
+@password_match
+Scenario: Customer Registration Password Doesn't Match
+    When user creates a new account with check password unmatch
+    Then user sees missing mandatories fields alert message

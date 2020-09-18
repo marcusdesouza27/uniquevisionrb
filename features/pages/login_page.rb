@@ -18,7 +18,8 @@ class LoginPage < SitePrism::Page
     element :acceptTherms, 'label[for="check-accept"]'
     element :accepSubscribe, 'label[for="check-subscribe"]'
     element :btn_submit, '#btnCaptcha'
-    element :new_user_error, '.logErrorGlobal__log--icon'
+    element :new_user_error, :xpath, "/html[1]/body[1]/main[1]/div[9]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[2]"
+    element :new_user_error2, :xpath, "/html[1]/body[1]/main[1]/div[9]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]"
     
     def login(user, password)
         input_login.set(user)

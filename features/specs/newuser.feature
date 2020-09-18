@@ -13,6 +13,11 @@ Scenario: Customer Registration
     Then he see your email on my account page
 
 @duplicated_user
-Scenario: Customer Registration
-    When user creates a new account using
-    Then he see your email on my account page
+Scenario: Customer Registration Duplicated e-mail
+    When user creates a new account using existent email
+    Then user sees alert message error
+
+@mandatories_fields
+Scenario: Customer Registration Mandatories fields
+    When user creates a new account without mandatories fields
+    Then user sees missing mandatories fields alert message

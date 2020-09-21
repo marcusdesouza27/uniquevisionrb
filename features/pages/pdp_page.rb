@@ -1,10 +1,10 @@
 class ProductDetailPage < SitePrism::Page
     element :product_name, '.name'
-    element :product_desc, 'div.col-xs-12.col-md-5.col-lg-5 > section.product-main-info > div:nth-child(1) > div > div > div.description > span'
+    element :product_summary, 'div.col-xs-12.col-md-5.col-lg-5 > section.product-main-info > div:nth-child(1) > div > div > div.description > span'
     element :strike_price, 'span[itemprop="priceCurrency"]'
     element :price, 'span[itemprop="price"]'
-    element :button_buyNow, :xpath, '.btn-prescription'
-    element :button_tryNow, '.js-virtualTryOnPopUp'
+    element :button_buyNow, 'div[class="btn"]'
+    element :button_tryNow, 'div[data-target="#modalPdpVirtualTryOn"]'
     element :button_addToBag, '#addToCartButton'
     element :opt_pink, 'div:nth-child(1) > div > div > div.variant-product.hide--mobile > div > div > ul > div.owl-stage-outer > div > div:nth-child(1) > li > a'
     element :opt_green, 'div:nth-child(1) > div > div > div.variant-product.hide--mobile > div > div > ul > div.owl-stage-outer > div > div:nth-child(2) > li > a'
@@ -42,7 +42,15 @@ class ProductDetailPage < SitePrism::Page
     element :condCheck_prescription, 'label[for="condCheck"]'
     element :button_attachPrescription, 'input[name="files"]'
 
-    def pdp_addFavorite
+    def precription_buyNow
+        button_buyNow.click
+    end
 
+    def precription_tryNow
+        button_tryNow.click
+    end
+
+    def noPrescription_addCart
+        button_addToBag.click
     end
 end

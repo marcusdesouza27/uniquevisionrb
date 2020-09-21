@@ -10,19 +10,19 @@ Feature: Product Detail Page
 
 @pdpNoPrescription
 Scenario: Validate PDP product without prescription
-    When I open a no prescription product PDP
-    Then I see products information
-    And button to add to bag
+    When user opens a no prescription product PDP
+    Then user sees products information
+    And sees button to add to bag
 
 @pdpWithPrescription
 Scenario: Validate PDP product without prescription
-    When I open product with prescription PDP
-    Then I see products information
-    And button Buy Now
+    When user opens product with prescription PDP
+    Then user sees products information
+    And sees button Buy Now
 
 @pdpWithTryNow
 Scenario: Validate PDP product without prescription
-    When I open a product with tryon PDP
-    Then I see products information
-    And button Try Now
+    When user opens a product with tryon PDP
+    Then user sees products information
+    And sees button Try Now
      

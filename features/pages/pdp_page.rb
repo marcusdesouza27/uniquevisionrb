@@ -40,5 +40,9 @@ class ProductDetailPage < SitePrism::Page
     element :leftAddition, 'select[class="js-leftAddition"]'
     element :interpupilarDistance, 'select[name="interpupilarDistance"]'
     element :condCheck_prescription, 'label[for="condCheck"]'
-    element :button_attachPrescription, 
+    element :button_attachPrescription, 'input[name="files"]'
+
+    def pdp_addFavorite
+
+    end
 end

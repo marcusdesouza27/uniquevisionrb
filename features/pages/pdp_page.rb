@@ -53,26 +53,32 @@ class ProductDetailPage < SitePrism::Page
     end
 
     def click_tryNow
+        wait_until_button_tryNow_visible
         button_tryNow.click
     end
 
     def click_addCart
+        wait_until_button_addToBag_visible
         button_addToBag.click
     end
 
     def lens_mountOnly
+        wait_until_opt_mountOnly_visible
         opt_mountOnly.click
     end
 
     def lens_noMeasure
+        wait_until_opt_noMeasure_visible
         opt_noMeasure.click
     end
 
     def lens_far
+        wait_until_opt_far_visible
         opt_far.click
     end
 
     def lens_near
+        wait_until_opt_near_visible
         opt_near.click
     end
 
@@ -100,27 +106,33 @@ class ProductDetailPage < SitePrism::Page
     end
 
     def btnMoreOneStep
+        wait_until_btnStepPresc_visible
         btnStepPresc.click
     end
     
 
     def basicLensOpt
+        wait_until_basic_lens_visible
         basic_lens.click
     end
 
     def plusLensOpt
+        wait_until_plus_lens_visible
         plus_lens.click
     end
 
     def plusUVLensOpt
+        wait_until_plusUV_lens_visible
         plusUV_lens.click
     end
 
     def premiumLensOpt
+        wait_until_premium_lens_visible
         premium_lens.click
     end
 
     def lens_addToCart
+        wait_until_button_addToCart_lenses_visible
         button_addToCart_lenses.click
     end
 end

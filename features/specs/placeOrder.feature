@@ -49,7 +49,7 @@ Scenario: Buy product with Basics Lens
     And user proceeds login
     And user opens product with prescription PDP
     And clicks on Buy Now button
-    And user select No Measure lens option
+    And user selects No Measure lens option
     And user selects Basics lens
     And user add product to cart
     Then user sees minicart with added product

@@ -57,7 +57,7 @@ end
 When("user select Mount Only lens option") do
   @pdp.lens_mountOnly
 end
-When("user select No Measure lens option") do
+When("user selects No Measure lens option") do
   @pdp.lens_noMeasure
 end
 
@@ -96,11 +96,6 @@ end
 
 When("user selects Premium lens") do
   @pdp.premiumLensOpt
-end
-
-When("user checks to confirm prescription") do
-  @pdp.prescriptionCheck
-  @pdp.btnMoreOneStep
 end
 
 Then("user sees minicart with added product") do

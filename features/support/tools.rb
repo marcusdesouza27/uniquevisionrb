@@ -8,3 +8,10 @@ def page_certification
      end
 
 end
+
+def closeSession
+   Capybara.current_session.driver.quit
+   # restart Selenium driver
+  # page.execute_script 'window.close;'
+  # Capybara.send(:session_pool).delete_if { |key, _value| key =~ /selenium/i }
+end

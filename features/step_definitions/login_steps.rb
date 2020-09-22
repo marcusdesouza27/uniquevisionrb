@@ -2,39 +2,39 @@ When('User acces My Account page') do
   @uvhome.login_reg
 end
 
-When('User proceed login') do
+When('user proceeds login') do
   @login.login(DATA['user'], DATA['pwd'])
   @login.login_btn
 end
 
-When("User proceed login as user to edit") do
+When("user proceeds login as user to edit") do
   @login.login(DATA['editUser'], DATA['editUserPwd'])
   @login.login_btn
 end
 
-Then('I see logged page user') do
+Then('sees logged page user') do
   expect(page).to have_content(DATA['user'])
 end
 
-When("User proceed login as edited user") do
+When("user proceeds login as edited user") do
   @login.login(DATA['newEmail'], DATA['newPwd'])
   @login.login_btn
 end
 
-When('User proceed login with unexistent email') do
+When('user proceeds login with unexistent email') do
   @login.login(DATA['inv_user'], DATA['pwd'])
   @login.login_btn
 end
 
-Then('I see an alert error') do
+Then('sees an alert error') do
   expect(@login.div_alert_login).to have_content MESSAGE_ASSERT['login_fail']
 end
 
-When("User proceed login with invalid password") do
+When("user proceeds login with invalid password") do
   @login.login(DATA['inv_user'], DATA['pwd'])
   @login.login_btn
 end
 
-When("User proceed login without fill fields") do
+When("user proceeds login without fill fields") do
   @login.login_btn
 end

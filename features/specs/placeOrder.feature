@@ -70,7 +70,7 @@ Scenario: Buy product with Lens Prescriprion Far
     And user opens product with prescription PDP
     And clicks on Buy Now button
     And user select Far lens option
-    And user sets prescription data
+    And user sets prescription data    
     And user checks to confirm prescription
     And user selects PlusUV lens
     And user add product to cart
@@ -92,7 +92,7 @@ Scenario: Buy product with Lens Prescriprion Near
     And user opens product Paulina Red PDP
     And clicks on Buy Now button
     And user select Near lens option
-    And user sets prescription data
+    And user ataches prescription data
     And user checks to confirm prescription
     And user selects Premium lens
     And user add product to cart

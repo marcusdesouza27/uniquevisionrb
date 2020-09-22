@@ -77,6 +77,15 @@ When("user sets prescription data") do
   @pdp.setPrescription
 end
 
+When("user ataches prescription data") do
+  @pdp.attPrescription
+end
+
+When("user checks to confirm prescription") do
+  @pdp.prescriptionCheck
+  @pdp.btnMoreOneStep
+end
+
 When("user selects Basics lens") do                                                  
   @pdp.basicLensOpt
 end 

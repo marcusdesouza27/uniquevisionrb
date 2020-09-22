@@ -25,8 +25,8 @@ class ProductDetailPage < SitePrism::Page
     element :opt_noMeasure, 'div[data-lens-type="NO_MEASURE"]'
     element :opt_far, 'div[data-lens-type="FAR"]'
     element :opt_near, 'div[data-lens-type="NEAR"]'
-    element :span_subtotal, 'div.col-xs-6.col-sm-6.col-md-6.no-padding.sub'
-    element :span_subtotalPrice, '.js-product-price-lens'
+    element :spanSubtotal, 'div.col-xs-6.col-sm-6.col-md-6.no-padding.sub'
+    element :spanSubtotalPrice, '.js-product-price-lens'
     element :button_addToCart_lenses, '.js-show-popup'
     element :opt_set_prescription, '.js-open-form-desc'
     element :opt_attach_prescription, '.js-open-upload-desc'
@@ -40,7 +40,7 @@ class ProductDetailPage < SitePrism::Page
     element :leftAddition, 'select[class="js-leftAddition"]'
     element :interpupilarDistance, 'select[name="interpupilarDistance"]'
     element :condCheck_prescription, 'label[for="condCheck"]'
-    element :button_attachPrescription, 'input[name="files"]'
+    element :button_attachPrescription, 'input[id="attachmentPrescFiles"]' #'input[name="files"]'
     element :btnStepPresc, '.js-btnStepPresc'
     element :basic_lens, 'div[data-id="360001"]'
     element :plus_lens, 'div[data-id="360002"]'
@@ -49,6 +49,7 @@ class ProductDetailPage < SitePrism::Page
 
     def click_buyNow
         button_buyNow.click
+        wait_until_spanSubtotal_visible
     end
 
     def click_tryNow
@@ -86,6 +87,12 @@ class ProductDetailPage < SitePrism::Page
         leftAxis.send_keys('8')
         leftAddition.send_keys('+0.25')
         interpupilarDistance.send_keys('45')
+    end
+
+    def attPrescription
+        opt_attach_prescription.click
+        button_attachPrescription.make_visible
+        attach_file(button_attachPrescription, "spec/files/prescription.jpg")
     end
 
     def prescriptionCheck

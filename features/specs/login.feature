@@ -8,20 +8,20 @@ Feature:
 
 @valid_login
 Scenario: Unique Vision Login Page
-    When User proceed login
-    Then I see logged page user
+    When user proceeds login
+    Then sees logged page user
 
 @invalid_login_user
 Scenario: Unique Vision Login Page
-    When User proceed login with unexistent email
-    Then I see an alert error
+    When user proceeds login with unexistent email
+    Then sees an alert error
 
 @invalid_login_pwd
 Scenario: Unique Vision Login Page
-    When User proceed login with invalid password
-    Then I see an alert error
+    When user proceeds login with invalid password
+    Then sees an alert error
 
 @invalid_login_empty
 Scenario: Unique Vision Login Page
-    When User proceed login without fill fields
-    Then I see an alert error
+    When user proceeds login without fill fields
+    Then sees an alert error

@@ -28,7 +28,7 @@ class ProductDetailPage < SitePrism::Page
     element :span_subtotal, 'div.col-xs-6.col-sm-6.col-md-6.no-padding.sub'
     element :span_subtotalPrice, '.js-product-price-lens'
     element :button_addToCart_lenses, '.js-show-popup'
-    element :opt_prescription_desc, '.js-open-form-desc'
+    element :opt_set_prescription, '.js-open-form-desc'
     element :opt_attach_prescription, '.js-open-upload-desc'
     element :rightSphere, 'select[name="rightSphere"]'
     element :leftSphere, 'select[name="leftSphere"]'
@@ -41,16 +41,79 @@ class ProductDetailPage < SitePrism::Page
     element :interpupilarDistance, 'select[name="interpupilarDistance"]'
     element :condCheck_prescription, 'label[for="condCheck"]'
     element :button_attachPrescription, 'input[name="files"]'
+    element :btnStepPresc, '.js-btnStepPresc'
+    element :basic_lens, 'div[data-id="360001"]'
+    element :plus_lens, 'div[data-id="360002"]'
+    element :plusUV_lens, 'div[data-id="360003"]'
+    element :premium_lens, 'div[data-id="360004"]'
 
-    def precription_buyNow
+    def click_buyNow
         button_buyNow.click
     end
 
-    def precription_tryNow
+    def click_tryNow
         button_tryNow.click
     end
 
-    def noPrescription_addCart
+    def click_addCart
         button_addToBag.click
+    end
+
+    def lens_mountOnly
+        opt_mountOnly.click
+    end
+
+    def lens_noMeasure
+        opt_noMeasure.click
+    end
+
+    def lens_far
+        opt_far.click
+    end
+
+    def lens_near
+        opt_near.click
+    end
+
+    def setPrescription
+        opt_set_prescription.click
+        rightSphere.send_keys('-1.75')
+        rightCylinder.send_keys('-1.00')
+        rightAxis.send_keys('8')
+        rightAddition.send_keys('+0.25')
+        leftSphere.send_keys('-1.25')
+        leftCylinder.send_keys('-1.00')
+        leftAxis.send_keys('8')
+        leftAddition.send_keys('+0.25')
+        interpupilarDistance.send_keys('45')
+    end
+
+    def prescriptionCheck
+        condCheck_prescription.click
+    end
+
+    def btnMoreOneStep
+        btnStepPresc.click
+    end
+    
+
+    def basicLensOpt
+        basic_lens.click
+    end
+
+    def plusLensOpt
+        plus_lens.click
+    end
+
+    def plusUVLensOpt
+        plusUV_lens.click
+    end
+
+    def premiumLensOpt
+        premium_lens.click
+    end
+
+    def lens_addToCart
+        button_addToCart_lenses.click
     end
 end

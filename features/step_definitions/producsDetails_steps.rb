@@ -16,9 +16,9 @@ When("user opens product with prescription PDP") do
   visit "/p/#{@productCode}"
 end
 
-When("user opens product Paulina Red PDP") do                     
+When("user opens product Paulina Red PDP") do
   @productCode = (DATA['paulina_red'])
-  visit "/p/#{@productCode}"                                                                     
+  visit "/p/#{@productCode}"
 end
 
 Then("user sees products information") do
@@ -65,13 +65,13 @@ When("user select Far lens option") do
   @pdp.lens_far
 end
 
-When("user select Near lens option") do                                        
+When("user select Near lens option") do
   @pdp.lens_near
 end 
 
 When("user add product to cart") do
   @pdp.lens_addToCart
-end  
+end
 
 When("user sets prescription data") do
   @pdp.setPrescription
@@ -86,7 +86,7 @@ When("user checks to confirm prescription") do
   @pdp.btnMoreOneStep
 end
 
-When("user selects Basics lens") do                                                  
+When("user selects Basics lens") do
   @pdp.basicLensOpt
 end 
 
@@ -99,5 +99,9 @@ When("user selects Premium lens") do
 end
 
 Then("user sees minicart with added product") do
-  puts('MiniCart - To develop')
+  expect( @side_cart.label_shipBag).to  have_content('BOLSA DE COMPRAS')
+end
+
+When("clicks on buy now button") do
+  @side_cart.buyNow
 end

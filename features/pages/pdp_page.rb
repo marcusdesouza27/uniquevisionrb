@@ -102,14 +102,14 @@ class ProductDetailPage < SitePrism::Page
     end
 
     def prescriptionCheck
+        wait_until_condCheck_prescription_visible
         condCheck_prescription.click
     end
 
     def btnMoreOneStep
         wait_until_btnStepPresc_visible
         btnStepPresc.click
-    end
-    
+    end    
 
     def basicLensOpt
         wait_until_basic_lens_visible

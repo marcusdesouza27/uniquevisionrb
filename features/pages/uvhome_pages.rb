@@ -12,9 +12,7 @@ class UvHome < SitePrism::Page
         uvlogo.click
     end
 
-    # def input_search
-    #     input_search.click
-    # end
+   
 
     def login_reg 
         icon_profile.click

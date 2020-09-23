@@ -15,7 +15,6 @@ Scenario: Buy product without prescription
     And user clicks on Add to Bag button
     Then user sees minicart with added product
     When clicks on buy now button
-    Then sees the added product
     When user clicks on continue button
     Then sees checkout page
     When user forwards Step one
@@ -34,7 +33,6 @@ Scenario: Buy product without prescription
     And user add product to cart
     Then user sees minicart with added product
     When clicks on buy now button
-    Then sees the added product
     When user clicks on continue button
     Then sees checkout page
     When user forwards Step one
@@ -54,7 +52,6 @@ Scenario: Buy product with Basics Lens
     And user add product to cart
     Then user sees minicart with added product
     When clicks on buy now button
-    Then sees the added product
     When user clicks on continue button
     Then sees checkout page
     When user forwards Step one
@@ -76,7 +73,6 @@ Scenario: Buy product with Lens Prescriprion Far
     And user add product to cart
     Then user sees minicart with added product
     When clicks on buy now button
-    Then sees the added product
     When user clicks on continue button
     Then sees checkout page
     When user forwards Step one
@@ -98,7 +94,6 @@ Scenario: Buy product with Lens Prescriprion Near
     And user add product to cart
     Then user sees minicart with added product
     When clicks on buy now button
-    Then sees the added product
     When user clicks on continue button
     Then sees checkout page
     When user forwards Step one

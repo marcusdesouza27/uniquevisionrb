@@ -12,6 +12,7 @@ Before do
     @product_list = ProductList.new
     @pdp = ProductDetailPage.new
     @side_cart = SideCart.new
+    @cart = Cart.new
 end
 
 After do |scenario|

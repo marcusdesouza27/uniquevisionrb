@@ -13,6 +13,8 @@ Before do
     @pdp = ProductDetailPage.new
     @side_cart = SideCart.new
     @cart = Cart.new
+    @checkout = Checkout.new
+    @confirmation = OrderConfirmation.new
 end
 
 After do |scenario|

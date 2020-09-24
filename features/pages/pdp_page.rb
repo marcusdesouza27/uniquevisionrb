@@ -77,11 +77,13 @@ class ProductDetailPage < SitePrism::Page
     def lens_far
         wait_until_opt_far_visible
         opt_far.click
+        page.execute_script('window.scrollTo(0, 150)')
     end
 
     def lens_near
         wait_until_opt_near_visible
         opt_near.click
+        page.execute_script('window.scrollTo(0, 150)')
     end
 
     def setPrescription

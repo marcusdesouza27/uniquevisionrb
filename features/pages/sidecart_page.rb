@@ -12,10 +12,12 @@ class SideCart < SitePrism::Page
     element :btn_addQtdy, 'button[class="qty-selector__btn btn js-qty-selector-plus mini-cart-new-qty js-plus__btn"]'
     
     def closeSideCart
+        wait_until_btn_sidecartClose_visible
         btn_sidecartClose.click
     end
 
     def buyNow
+        wait_until_btn_buyNow_visible
         btn_buyNow.click
     end
 

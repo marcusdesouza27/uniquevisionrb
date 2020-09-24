@@ -99,7 +99,7 @@ When("user selects Premium lens") do
 end
 
 Then("user sees minicart with added product") do
-  expect( @side_cart.label_shipBag).to  have_content('BOLSA DE COMPRAS')
+  expect(@side_cart.label_shipBag).to  have_content('BOLSA DE COMPRAS')
 end
 
 When("clicks on buy now button") do

@@ -3,6 +3,10 @@ inv_user: unexistent@test.com
 pwd: Test1234
 pwd_fail: 123456
 credit_card: 4111111111111111
+RUC_NR: 10164181826
+DNI_NR: 25415896
+PSP_NR: PE52145863254
+CE_NR: 001043328
 user_hybris: auto.ybluqateam
 userhyb_pwd: qa#auto@999
 edit_name: Automation

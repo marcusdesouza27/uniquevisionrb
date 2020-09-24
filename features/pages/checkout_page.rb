@@ -43,6 +43,7 @@ class Checkout < SitePrism::Page
     end
 
     def selectCard
+        wait_until_btn_savedCards_visible
         btn_savedCards.click
         wait_until_firstCard_visible
         firstCard.click
@@ -68,7 +69,7 @@ class Checkout < SitePrism::Page
     end
 
     def stepFourSubmit
-        btn_stepFourSubmit
+        wait_until_btn_stepFourSubmit_visible
         btn_stepFourSubmit.click
     end
 

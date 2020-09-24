@@ -22,6 +22,8 @@ When("user confirms place order") do
 end
 
 Then("user sees order confirmation page") do
-    expect(@confirmation.title).to have_content('HAS REALIZADO CON ÉXITO TU COMPRA')
+    @confirmation.confirmLoad
+    expect(@confirmation.title).to have_content('Order Confirmation')
+    # expect(@confirmation.title).to have_content('HAS REALIZADO CON ÉXITO TU COMPRA')
     expect(@confirmation.label_order).to have_content('RESUMEN DE COMPRA')
 end

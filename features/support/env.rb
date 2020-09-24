@@ -61,8 +61,8 @@ end
 
 Capybara.configure do |c|
   c.default_driver = @driver
-  c.default_max_wait_time = 30
-  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  c.default_max_wait_time = 20
+  wait = Selenium::WebDriver::Wait.new(:timeout => 20)
   Capybara.page.driver.browser.manage.window.maximize
   # c.app_host = 'https://uniquevision:9002/pe' #DEV
   c.app_host = "#{$base_url}"

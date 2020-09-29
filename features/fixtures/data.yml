@@ -1,4 +1,5 @@
 user: automation@ruby.com
+# user: sprintfive@mat.com
 inv_user: unexistent@test.com
 pwd: Test1234
 pwd_fail: 123456
@@ -11,9 +12,9 @@ user_hybris: auto.ybluqateam
 userhyb_pwd: qa#auto@999
 edit_name: Automation
 edit_lastname: Customer
-editUser: test.update@auto.com
+editUser: test.update@ruby.com
 editUserPwd: Test1234
-newEmail: automation@update.com
+newEmail: ruby@update.com
 newPwd: New123pwd
 new_name: Edited Name
 new_lastname: Lastname Edited

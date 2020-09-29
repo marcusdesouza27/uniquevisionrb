@@ -18,7 +18,7 @@ class Checkout < SitePrism::Page
     element :card_expiration, 'input[name="expiration"]'
     element :card_cvv, 'div[id="cvv-input-container"]'
     element :check_saveCard, 'label[for="savedCard"]'
-    element :btn_savedCards, 'button[class*="js-saved-payments'
+    element :btn_savedCards, 'button[class*="js-saved-payments"]'
     element :firstCard, :xpath, "/html[1]/body[1]/div[3]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/button[1]" 
     element :noPresc_docType, 'select[id="receiptDocumentType"]'
     element :noPresc_docNumber, 'input[id="receiptDocumentNumber"]'

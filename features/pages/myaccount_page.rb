@@ -18,6 +18,15 @@ class MyAccount <SitePrism::Page
     element :icon_closeSection, '.icon-log-out'
     element :link_closeSection, '.__all--opt > li:nth-child(3) > div:nth-child(1) > a:nth-child(2)'
 
+    #creditCards
+    element :pageTitle, 'div.yourCreditCards--mobile > h2'
+    element :cardModal, 'div[class*="account-paymentdetails__choice-card-default--card"]'
+    element :iconTrash, :xpath, "/html[1]/body[1]/main[1]/div[9]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/a[1]/i[1]"
+    #Order History
+    element :orderHistoryTitle, 'div[class*="account-section-header myAccount__title--order-history"]'
+    # element :
+    ############################################
+
     def myaccount_elements
         span_title.hover
         span_hello.hover

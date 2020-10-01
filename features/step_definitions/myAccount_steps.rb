@@ -7,9 +7,9 @@ Then("I verify all elements on page") do
   end
 
   When("edits your name and lastname") do
-    @profile.edit_name_open
-    @profile.edit_name(DATA['new_name'], DATA['new_lastname'])
-    @profile.submit_btn
+    # @profile.edit_name_open
+    # @profile.edit_name(DATA['new_name'], DATA['new_lastname'])
+    # @profile.submit_btn
   end
  
   When("edits your email") do
@@ -25,9 +25,9 @@ Then("I verify all elements on page") do
   end
 
   When("restores older name and lastname") do
-    @profile.edit_name_open
-    @profile.edit_name(DATA['edit_name'], DATA['edit_lastname'])
-    @profile.submit_btn
+    # @profile.edit_name_open
+    # @profile.edit_name(DATA['edit_name'], DATA['edit_lastname'])
+    # @profile.submit_btn
   end
 
   When("restores your email") do

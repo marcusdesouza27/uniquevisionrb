@@ -21,15 +21,15 @@ class ProductDetailPage < SitePrism::Page
     element :icon_shareFacebook, '.icon-fill-facebook'
     element :icon_moreInfo, 'a[href="#content-3"]'
     element :img_product, :xpath, '/html[1]/body[1]/main[1]/div[9]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/section[1]/div[3]/div[1]/div[1]/div[1]/a[1]/img[1]'
-    element :opt_mountOnly, 'div[class*="js-click-select-single"]'
-    element :opt_noMeasure, 'div[class*="js-click-select-noValue"]'
-    element :opt_far, 'div[class*="js-click-select-farVision"]'
-    element :opt_near, 'div[class*="js-click-select-nearVision"]'
+    element :opt_mountOnly, 'div[data-lens-type="FRAME_ONLY"]'#'div[class*="js-click-select-single"]'
+    element :opt_noMeasure, 'div[data-lens-type="NO_MEASURE"]'#'div[class*="js-click-select-noValue"]'
+    element :opt_far, 'div[data-lens-type="FAR"]' #'div[class*="js-click-select-farVision"]'
+    element :opt_near, 'div[data-lens-type="NEAR"]'#'div[class*="js-click-select-nearVision"]'
     element :spanSubtotal, 'div.col-xs-6.col-sm-6.col-md-6.no-padding.sub'
     element :spanSubtotalPrice, '.js-product-price-lens'
     element :button_addToCart_lenses, '.js-show-popup'
     element :opt_set_prescription, 'div[class*="js-menu-upload-form js-open-form-desc"]' #'.js-open-form-desc'
-    element :opt_attach_prescription, 'div[class*="js-menu-upload-form js-open-upload-desc"]'# '.js-open-upload-desc'
+    element :opt_attach_prescription, 'div.col-xs-12.col-sm-6.col-md-6.spcPrescUp.js-click-upload-presc.hide--mobile > div'
     element :rightSphere, 'select[name="rightSphere"]'
     element :leftSphere, 'select[name="leftSphere"]'
     element :rightCylinder, 'select[class="js-rightCylinder"]'
@@ -40,7 +40,7 @@ class ProductDetailPage < SitePrism::Page
     element :leftAddition, 'select[class="js-leftAddition"]'
     element :interpupilarDistance, 'select[name="interpupilarDistance"]'
     element :condCheck_prescription, 'label[for="condCheck"]'
-    element :button_attachPrescription, 'input[id="attachmentPrescFiles"]' #'input[name="files"]'
+    element :file_attachPrescription, 'input[id="attachmentPrescFiles"]' #'#attachmentPrescFiles'#'input[name="files"]'
     element :btnStepPresc, 'button[class="js-btnStepPresc"]'
     element :basic_lens, 'div[data-id="360001"]'
     element :plus_lens, 'div[data-id="360002"]'
@@ -65,25 +65,25 @@ class ProductDetailPage < SitePrism::Page
     def lens_mountOnly
         wait_until_opt_mountOnly_visible
         opt_mountOnly.click
-        page.execute_script('window.scrollTo(0, 150)')
+        # page.execute_script('window.scrollTo(0, 50)')
     end
 
     def lens_noMeasure
         wait_until_opt_noMeasure_visible
         opt_noMeasure.click
-        page.execute_script('window.scrollTo(0, 150)')
+        # page.execute_script('window.scrollTo(0, 50)')
     end
 
     def lens_far
         wait_until_opt_far_visible
         opt_far.click
-        page.execute_script('window.scrollTo(0, 150)')
+        # page.execute_script('window.scrollTo(0, 50)')
     end
 
     def lens_near
         wait_until_opt_near_visible
         opt_near.click
-        page.execute_script('window.scrollTo(0, 150)')
+        # page.execute_script('window.scrollTo(0, 150)')
     end
 
     def setPrescription
@@ -104,20 +104,13 @@ class ProductDetailPage < SitePrism::Page
     def attPrescription
         wait_until_opt_attach_prescription_visible
         opt_attach_prescription.click
-        # button_attachPrescription.make_visible
-        attach_file(button_attachPrescription, "spec/files/prescription.jpg")
+        attach_file(file_attachPrescription, "spec/files/prescription.jpg", :visible => true)
     end
 
     def prescriptionCheck
         wait_until_condCheck_prescription_visible
         condCheck_prescription.click
-        page.execute_script('window.scrollTo(0, 150)')
     end
-
-    def btnMoreOneStep
-        wait_until_btnStepPresc_visible
-        btnStepPresc.click
-    end    
 
     def basicLensOpt
         wait_until_basic_lens_visible
@@ -139,7 +132,14 @@ class ProductDetailPage < SitePrism::Page
         premium_lens.click
     end
 
+    def btnMoreOneStep
+        page.execute_script('window.scrollTo(0, 50)')
+        wait_until_btnStepPresc_visible
+        btnStepPresc.click
+    end   
+
     def lens_addToCart
+        page.execute_script('window.scrollTo(0, 50)')
         wait_until_button_addToCart_lenses_visible
         button_addToCart_lenses.click
     end

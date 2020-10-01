@@ -109,7 +109,6 @@ Scenario: Buy products for a mixed order
     When user opens a no prescription product PDP
     And user clicks on Add to Bag button
     Then user sees minicart with added product
-    When clicks on buy now button
     And user opens product with prescription PDP
     And clicks on Buy Now button
     And user select Far lens option

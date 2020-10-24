@@ -4,7 +4,7 @@ Before do
     visit '/'
     # page_certification()
     
-    @uvhome = UvHome.new
+    @homepage = HomePage.new
     @login = LoginPage.new
     @myaccount = MyAccount.new
     @profile = MyProfile.new

@@ -18,10 +18,17 @@ class MyAccount <SitePrism::Page
     element :icon_closeSection, '.icon-log-out'
     element :link_closeSection, '.__all--opt > li:nth-child(3) > div:nth-child(1) > a:nth-child(2)'
 
-    #creditCards
+    #My Credit Cards - No creditCards
     element :pageTitle, 'div.yourCreditCards--mobile > h2'
     element :cardModal, 'div[class*="account-paymentdetails__choice-card-default--card"]'
     element :iconTrash, :xpath, "/html[1]/body[1]/main[1]/div[9]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/a[1]/i[1]"
+
+    #My Credit Cards
+    element :credit_box1, :xpath, "/html/body/main/div[9]/div[2]/div/div[2]/div/div/div[2]/div/div/div/div/div[2]"
+    element :mycredit_delete, 'i[class*="icon-delete"]'
+    element :modal_deleteCard, 'div[id="cboxLoadedContent"]'
+    element :modal_submitDeletion, 'button[class="paymentsDeleteBtn"]'
+    element :modal_cancelDeletion, 'a[class="  closeColorBox paymentsDeleteBtn"]'
     #Order History
     element :orderHistoryTitle, 'div[class*="account-section-header myAccount__title--order-history"]'
     # element :

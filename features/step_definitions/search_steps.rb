@@ -1,5 +1,5 @@
 When("user searchs for products") do
-    @uvhome.search_paulina(DATA['product_search'])
+    @homepage.search_paulina(DATA['product_search'])
   end
   
   Then("all products is displayed") do
@@ -7,7 +7,7 @@ When("user searchs for products") do
   end
 
   When("user searchs for products without prescription") do
-    @uvhome.search_paulina(DATA['prod_noprescription'])
+    @homepage.search_paulina(DATA['prod_noprescription'])
     @result = (DATA['prod_noprescription'])
   end
   

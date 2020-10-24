@@ -1,5 +1,5 @@
 When('User acces My Account page') do
-  @uvhome.login_reg
+  @homepage.login_reg
 end
 
 When('user proceeds login') do

@@ -7,5 +7,6 @@ headless: BROWSER=headless
 json: --format json --out=logs/report.json
 pretty: --format pretty
 progress: --format progress
-devAWS: -p default ENVIRONMENT="https://uniquevision:9002/pe/"
-devSAP: -p default ENVIRONMENT="https://dev.uniquevision-hybris.com/pe/"
+devUVAWS: -p default ENVIRONMENT="https://uniquevision:9002/pe/"
+devUVSAP: -p default ENVIRONMENT="https://dev.uniquevision-hybris.com/pe/"
+devColRx: -p default ENVIRONMENT="https://yanbal-ams:9002/us/corporate/"

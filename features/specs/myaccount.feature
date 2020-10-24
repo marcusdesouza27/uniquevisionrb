@@ -36,3 +36,9 @@ Scenario: Credit Cards no Card
     When user proceeds login
     And user clicks in My Credits Cards menu
     Then sees no credit cards alert
+
+@credit_cards_elements
+Scenario: Credit Cards no Card
+    When user proceeds login
+    And user clicks in My Credits Cards menu
+    Then 

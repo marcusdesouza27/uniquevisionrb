@@ -1,5 +1,5 @@
 When('I access Unique Vision Homepage') do
-    @uvhome.coockie_accept
+    @homepage.coockie_accept
   end
   
   Then('I see Homepage loaded') do
@@ -7,20 +7,20 @@ When('I access Unique Vision Homepage') do
   end
                                                                                    
   When("user clicks on menu option Eyeglasses") do
-    @uvhome.catEyes
+    @homepage.catEyes
     @cen = 'CatEyes'
   end
 
   When("user clicks on menu option Sunglasses") do
-    @uvhome.sunwear
+    @homepage.sunwear
     @cen = 'Sunwear'
   end
   
   Then("sees his category page") do
     if @cen == 'CatEyes'
-      expect(@uvhome.breadcrumb).to have_content('EYEWEAR')
+      expect(@homepage.breadcrumb).to have_content('EYEWEAR')
     elsif @cen == 'Sunwear'
-      expect(@uvhome.breadcrumb).to have_content('SUNEWAR')      
+      expect(@homepage.breadcrumb).to have_content('SUNEWAR')      
     end
   end
   
